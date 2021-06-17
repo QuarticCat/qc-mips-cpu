@@ -1,0 +1,73 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           clash-mips
+version:        0.0.0
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+
+library
+  exposed-modules:
+      MIPS.ALU
+      MIPS.ArithModule
+      MIPS.ControlUnit
+      MIPS.DecodeModule
+      MIPS.ForwardUnit
+      MIPS.HazardUnit
+      MIPS.InstrDef
+      MIPS.InstrModule
+      MIPS.MemModule
+      MIPS.Prelude
+      MIPS.RAM
+      MIPS.RegisterFile
+      MIPS.WriteBackModule
+  other-modules:
+      Paths_clash_mips
+  hs-source-dirs:
+      src
+  default-extensions:
+      BinaryLiterals
+      ConstraintKinds
+      DataKinds
+      DeriveAnyClass
+      DeriveGeneric
+      DeriveLift
+      DerivingStrategies
+      ExplicitForAll
+      ExplicitNamespaces
+      FlexibleContexts
+      FlexibleInstances
+      KindSignatures
+      MagicHash
+      MonoLocalBinds
+      OverloadedStrings
+      OverloadedLists
+      QuasiQuotes
+      ScopedTypeVariables
+      TemplateHaskell
+      TemplateHaskellQuotes
+      TypeApplications
+      TypeFamilies
+      TypeOperators
+      NoImplicitPrelude
+      NoMonomorphismRestriction
+      NoStrict
+      NoStrictData
+      PartialTypeSignatures
+  ghc-options: -fplugin=GHC.TypeLits.Normalise -fplugin=GHC.TypeLits.Extra.Solver -fplugin=GHC.TypeLits.KnownNat.Solver
+  build-tool-depends:
+      clash-ghc:clash-ghc
+  build-depends:
+      base >=4.7 && <5
+    , clash-lib
+    , clash-prelude
+    , concurrent-supply
+    , ghc-typelits-extra
+    , ghc-typelits-knownnat
+    , ghc-typelits-natnormalise
+    , mtl
+  default-language: Haskell2010
